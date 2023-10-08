@@ -1,0 +1,267 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="all.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="allMovies.css")}}">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin="">
+  <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap")}}" rel="stylesheet">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+  <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap")}}" rel="stylesheet">
+  <title>Anime Gallary, AOT</title>
+</head>
+
+    
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+                </ul>
+                <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="{{url_for('static',filename="images/anime/AOT/AOT poster.jpg")}}" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>Attach On Titan</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2013</b></h5>
+                        <br>
+                        <p class="bolded">
+                          After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.
+                        </p>
+                        <br>
+                        <div>
+                        <button type="button" class="btn btn-outline-info">Animation</button>
+                        <button type="button" class="btn btn-outline-info">Action</button>
+                        <button type="button" class="btn btn-outline-info">Adventure</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://www.youtube.com/watch?v=MGRm4IzK1SQ" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Anime Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/-- □  Pᴏʀᴄᴏ Gᴀʟʟɪᴀʀᴅ.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/1920x1080-1181774-anime-Shingeki-no-Kyojin-comics-Colossal-Titan-screenshot-pc-game-comic-book.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/1920x1080-1346776-Eren-Yeager-Colossal-Titan-Shingeki-No-KyojinAttack.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/1920x1080-1375299-colossal-titan-attack-on-titan-anime-shingeki-no-kyojin.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/7bbd5f14dba3b3d9839dc5491004df53.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/Attack on Titan – Episode 34 Review – “Opening”.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/because you’re an ackermann.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/Levi Ackerman.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/MV5BMTg3MjhhMmUtMTBkZi00YWI5LTk1NTItOTBmNzMxMzE3N2U5XkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/MV5BMTY5ZmFlNzItMWEyMC00NWFkLTkzNjYtMjI0N2FlOWNlMDAyXkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/MV5BNWViOThjNzYtZDMxZC00ZWJjLWI0MmItNDE2ODhmMmYyNTc0XkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/MV5BYmNiNTZkNmEtOTA4NC00ZTE5LTk2MTItZmQwYTUzMmNkMGQ3XkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/anime/AOT/MV5BZWJkMTE3ZmItOGNjZS00ZjA1LTkxMGUtNzM5ZjExMjllYmMxXkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/pxfuel (1).jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/pxfuel.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/Shingeki No Kyojin (Attack On Titan) Screenshot.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/wallpaperflare.com_wallpaper.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/𝐞𝐫𝐞𝐧 𝐲𝐞𝐚𝐠𝐞𝐫.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename=)}}""images/anime/AOT/𝓣𝓱𝓮 𝓢𝓽𝓪𝓻𝓼 ☾ 𝘭_𝘢𝘤𝘬𝘦𝘳𝘮𝘢𝘯 - 𝘈𝘵 𝘭𝘦𝘢𝘴𝘵___.jpg" alt="">
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="info mb-5">
+                    <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                      Agallary
+                    </a>
+                    <p class="mb-5 bolded">
+                      This website is just a template for ITI as a project for IWT course.  
+                    </p>
+                    <div class="copyright text-dark bolded">
+                      Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                      <div>© 2023 - <span>IWT course</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                      <li><a href="#" class="footlink">Our Services</a></li>
+                      <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                      <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                      <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                      <li><a href="#" class="footlink">Terms and Condition</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="#" class="footlink">Sign In</a></li>
+                      <li><a href="#" class="footlink">Register</a></li>
+                      <li><a href="#" class="footlink">About Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="contact">
+                    <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>                    <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                      <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                      <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                      <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+    </body>
+</html>

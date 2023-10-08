@@ -1,0 +1,296 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="all.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="allMovies.css")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin="">
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap")}}" rel="stylesheet">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap")}}" rel="stylesheet">
+    <title>Series Gallary, HOTD</title>
+  </head>
+        
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link  p-2 p-lg-3" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="movies.html">Movies</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active p-2 p-lg-3" href="series.html">Series</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="anime.html">Anime</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+                  </li>
+                </ul>
+                <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="{{url_for('static',filename="images/series/HOTD/HOTD poster.jpg")}}" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>House Of The Dragon</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2022</b></h5>
+                        <br>
+                        <p class="bolded">
+                            An internal succession war within House Targaryen at the height of its power, 172 years before the birth of Daenerys Targaryen.
+                        </p>
+                        <br>
+                        <div>
+                        <button type="button" class="btn btn-outline-info">Drama</button>
+                        <button type="button" class="btn btn-outline-info">Action</button>
+                        <button type="button" class="btn btn-outline-info">Adventure</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://youtu.be/DotnJ7tTA34" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Series Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1225020.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1261729.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1261730.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1261731.jpg" )}}"alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1267280.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1267281.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1267282.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1273353.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1273357.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1274204.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1276482.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1276483.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1276485.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1277794.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1279207.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1279208.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1279213.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1280935.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1279214.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1280931.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1280934.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/8486434.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/8483282.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/8407100.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1283238.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1283237.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1283236.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1283235.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/HOTD/1283234.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="info mb-5">
+                    <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                      Agallary
+                    </a>
+                    <p class="mb-5 bolded">
+                      This website is just a template for ITI as a project for IWT course.  
+                    </p>
+                    <div class="copyright text-dark bolded">
+                      Created By <span class="green">Adham Magdy</span>
+                      <div>© 2023 - <span>IWT course</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                      <li><a href="#" class="footlink">Our Services</a></li>
+                      <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                      <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                      <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                      <li><a href="#" class="footlink">Terms and Condition</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="#" class="footlink">Sign In</a></li>
+                      <li><a href="#" class="footlink">Register</a></li>
+                      <li><a href="#" class="footlink">About Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="contact">
+                    <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                    <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                      <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                      <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                      <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+    </body>
+</html>

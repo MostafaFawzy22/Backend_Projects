@@ -1,0 +1,297 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/allMovies.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>Series Gallary, chernobyl</title>
+    
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+                </ul>
+                <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="images/series/chernobyl/chernobyl poster.jpg" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>chernobyl</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2019</b></h5>
+                        <br>
+                        <p class="bolded">
+                            In April 1986, an explosion at the Chernobyl nuclear power plant in the Union of Soviet Socialist Republics becomes one of the world's worst man-made catastrophes.
+                        </p>
+                        <br>
+                        <div>
+                        <button type="button" class="btn btn-outline-info">Drama</button>
+                        <button type="button" class="btn btn-outline-info">History</button>
+                        <button type="button" class="btn btn-outline-info">Thriller</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://youtu.be/s9APLXM9Ei8" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Series Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BM2E0OWFlOTYtNDU5ZC00YmMyLTk0NzctY2Q2YmYzMjE0ZGQwXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BM2FjYWRhMDktMGRjZS00MDY0LThlYjYtNzE3Y2E5ZDM3ZDYyXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BM2I1MjVhMWYtMjAyMS00ZGZiLTkxMDAtYWViYWJhODQ5M2M2XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BM2IzNTVlMmYtNzRkYi00NWZiLThjZTYtN2MxMjkwZjliMmY4XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BM2Y5YjhkMGUtNjY1MC00MzBkLWE3OTgtN2U1MWFjYmU1NDg4XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMDEwZmNhY2ItMDY3MC00NDQyLWI0N2QtZGY5ODE3M2UyYmE0XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMDFjYjQxOTQtOGM3Yy00OGU4LWIwNGEtMjJjMmI2YmRkNDM1XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMDgyZDM3ZDQtMTUzNy00NjAxLWIwMDgtNWRmMzY4ZDdjOTA0XkEyXkFqcGdeQXVyMTIzMzg5NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMDIzYWM5YmQtNjU5NS00MzExLWFlYjQtZmViZmIxYzg4MjBiXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMDQzZjRhYmItMDczZS00Zjk3LThkMDQtZDI1N2I3MmI4YTA1XkEyXkFqcGdeQXVyMTIzMzg5NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMjAwOTQzMDUtN2FhYi00YTgzLTgzNWItOWM4NmViYThkNDRhXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMjk4ODJlZTgtZTQ3ZS00OWM4LWExZTUtNzMyYzZlNzM3MTEyXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMjM3MzQyOWUtOTMxMC00ZmMzLWJhY2QtMjY4YjIxOTU2MjUwXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMmM5Zjk1ZWItZDE2MC00Y2IzLTljOTUtZmRhMWQ3ZWE1NTczXkEyXkFqcGdeQXVyMTIzMzg5NDU1._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMmYwYzYwYzUtZjE4My00MzIwLThlYzUtNzk1N2Y4NjUyNjFiXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMmYxMjMxYmItMjA4OC00NzE0LTlmNjktYzA0ZjVkNzQ1NGJiXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMTc1ZDU3NjgtNDUzMy00OTc5LTkzNjktOWMyMWExYTFkMWUzXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMTdkOGNmNDgtMDU3Mi00ZjliLWIwZDUtNDA5ZWZlYmUyNDEwXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BNTA5NTBlZTItNTBjZC00MGYwLWI3OTYtN2ZkOWVlMzkxYTUwXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BNGVkZTgwMjMtMzVmZS00ZDMwLWE3NzgtOTdkNjNhNjZjOTYxXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BN2M1MjBkMDUtMDQ4ZS00ZWIwLWE3MzktYTQ1OTkxYTg4Y2E5XkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMzM3NWI3NTgtMGUzNy00OTUwLWExOGItNWYwMzI1YjkxMWQzXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMzI3YzRlZGUtMWQ0MS00MDliLWI5OGQtNDE4ODljMmI0YTUzXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMzE2MjRjM2MtNWY1OC00MzcwLWIwYzYtNzQ0ODA2YTdhN2MzXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="images/series/chernobyl/MV5BMzcxYjhhYTMtMjQ0My00ZmQyLTgwMWItYTQxYzFhMWY2NTVjXkEyXkFqcGdeQXVyODExNTExMTM@._V1_FMjpg_UX1024_.jpg" alt="">
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="info mb-5">
+                    <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                      Agallary
+                    </a>
+                    <p class="mb-5 bolded">
+                      This website is just a template for ITI as a project for IWT course.  
+                    </p>
+                    <div class="copyright text-dark bolded">
+                      Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                      <div>© 2023 - <span>IWT course</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="home.html" class="footlink">Home</a></li>
+                      <li><a href="#" class="footlink">Our Services</a></li>
+                      <li><a href="movies.html" class="footlink">Movies</a></li>
+                      <li><a href="series.html" class="footlink">Series</a></li>
+                      <li><a href="anime.html" class="footlink">Anime</a></li>
+                      <li><a href="#" class="footlink">Terms and Condition</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="#" class="footlink">Sign In</a></li>
+                      <li><a href="#" class="footlink">Register</a></li>
+                      <li><a href="#" class="footlink">About Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="contact">
+                    <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>                    <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                      <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                      <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                      <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+    </body>
+</html>

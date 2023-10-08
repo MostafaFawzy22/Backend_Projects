@@ -1,0 +1,306 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="all.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="allMovies.css")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin="">
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap")}}" rel="stylesheet">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap")}}" rel="stylesheet">
+    <title>Series Gallary, TLOU</title>
+  </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+                </ul>
+                <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="{{url_for('static',filename="images/series/TLOU/TLOU poster.jpg")}}" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>The Last Of Us</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2023</b></h5>
+                        <br>
+                        <p class="bolded">
+                            After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-year-old girl who may be humanity's last hope.
+                        </p>
+                        <br>
+                        <div>
+                            <button type="button" class="btn btn-outline-info">Action</button>
+                            <button type="button" class="btn btn-outline-info">Adventure</button>
+                            <button type="button" class="btn btn-outline-info">Drama</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://youtu.be/uLtkt8BonwM" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Series Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BM2MwN2E4ODUtNmEzZS00NTQyLWEwN2MtM2E2MGRiNTI0YzlkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMDAxMzhkNjUtYzRjNi00MTQwLTg4ZjEtZjc2ZGY3OGZhNmQwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMDgyN2ViN2QtYWZjOC00MjlmLTkyY2QtMDQ0ZGQ0ZGYyYjM5XkEyXkFqcGdeQXVyNDI5MDY4MQ@@._V1_FMjpg_UX800_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMDY2NDhjZDktMTNlMy00NDQxLTlkMTEtNDAyZjYzZWMxNmQ4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMGM2NjgwNzMtOGE5OC00MDdiLWI5NWUtM2ZkYWRmYjIxZTZkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMjdmMWY3NGEtOTQ2MC00MzIyLWE2MGMtMDMzZTg4ZmVhYTVlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMjEwMDQ1Y2QtMjc1OC00MzYwLTg5MDAtOGYwMjQxYTZjMDg3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMjliN2UxNmUtMTg3MS00MjBhLTljOWItOGZlMDlkZTY3NDQ4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMjM3ZTRiMTQtMWM5NS00NWY1LThlODgtMWY1NDRiNjY2OGM2XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMTc1N2IyYmMtMzFlYy00MmY1LWI4MDAtYzk5NWVlMDkxN2IzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMTk3YTY2NWQtOGFhMC00ZTc3LWJjZmEtYjU5ODFkMWQ4OTFlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMTM1YmE3M2MtY2YwOS00YzJlLWFlZjgtY2MxN2Q3YjdmZjhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMzk2NGU5NTgtNTQxOC00ZDRlLWJmZDYtYTIxMTYxYTA1NjEzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BMzViMDY5YTUtM2ZhYS00MWQxLWIyZTctMzc3ZjZlMTM3MzUwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNDgyMDA2NGItYTJiMS00NDJjLTlmM2ItNDI2Yzg1MTQwZjdkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNmM5YmNiYWItNDNjZi00OGMzLWFkMGItMjg5Y2MxZDM5MzM5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX980_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNmMyZmVhOTItODdmYS00NzJjLWI2Y2ItZTVkODRlZWI1YTM0XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNTI0OWRlYjgtOTdkNS00MTY5LTg3MDUtNTJlZDVhNzgyZDhiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNTlmZjU1MWUtMWM1NS00MTY5LWFiNjYtOTc4YTI2MDE3N2VhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX980_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNTViNGEwM2UtNTIzMy00YjU4LTk4NTAtMWM1OWNjMjU1ODM1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BZjQwZGMxOGEtYTY5NS00N2Q0LWE3NzEtZDYyZGI3ZjMwZGVhXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BYjk4ODI4YTUtN2Y3Mi00ZDg5LWJhMTUtYzllOTVjZDQ2MGQ3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BY2Y3MDA5ZTAtNzg1My00NmMyLTkzZjEtMjY1ZGUwOTk5NGYxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BOTQ0ODdhZGYtN2JlNi00ODJhLWJlYzEtMzMyMTk3NjdlOGYzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNzA5MjY4ZjQtY2RhZi00MDM2LWExZjctMTkxYWZmN2QwYmRlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNWI1ZDhmZjAtMjhhOC00ZThlLTlmMzMtYTI3ODIxYmRkYTAxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/series/TLOU/MV5BNTZmODg5N2YtYzQ3Ny00N2EwLWJlMWItOGQxMGRlM2ZiN2I1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="info mb-5">
+                <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                  Agallary
+                </a>
+                <p class="mb-5 bolded">
+                  This website is just a template for ITI as a project for IWT course.  
+                </p>
+                <div class="copyright text-dark bolded">
+                  Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                  <div>© 2023 - <span>IWT course</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <div class="links">
+                <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                <ul class="list-unstyled lh-lg bolded">
+                  <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                  <li><a href="#" class="footlink">Our Services</a></li>
+                  <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                  <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                  <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                  <li><a href="#" class="footlink">Terms and Condition</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <div class="links">
+                <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                <ul class="list-unstyled lh-lg bolded">
+                  <li><a href="#" class="footlink">Sign In</a></li>
+                  <li><a href="#" class="footlink">Register</a></li>
+                  <li><a href="#" class="footlink">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="contact">
+                <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>                <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                  <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                  <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+    </body>
+</html>

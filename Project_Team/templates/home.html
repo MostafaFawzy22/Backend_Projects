@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+        <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+        <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css.map")}}">
+        <link rel="stylesheet" href="{{url_for('static',filename="home.css")}}">
+        <title>HOME</title>
+    </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand titlefont" href={{url_for('index')}}>
+Gallary
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="main">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+          </ul>
+            <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                <i class="fa-solid fa-magnifying-glass "></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="landing d-flex justify-content-center align-items-center">
+        <div class="text-center text-light">
+          <h1> <b>Explore Your Own World</b> </h1>
+          <p class="fs-6 text-white-50 mb-5" >Movies, Series and Anime</p>
+          <a href="#start" class="btn main-btn rounded-pill mycolor"> <b>Get Started</b></a>
+
+        </div>
+      </div>
+
+      <a name="start"></a>
+      <div class="features text-center pt-5 pb-5">
+        <div class="container">
+          <div class="main-title mt-5 mb-5 position-relative">
+            <i class="fa-solid fa-people-carry-box fa-4x mb-3 mt-5" style="color: var(--green-color);"></i>
+            <h2 class="bolded">Search For Your Gallary</h2>
+            <p class="text-black-50 text-uppercase"><b>for movies, series and anime</b></p>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("movies")}} class="text-decoration-none">
+                <div class="feat">
+                  <div class="icon-holder position-relative">
+                    <i class="fa-solid fa-film fa-4x bottom-0 icon"></i>
+                  </div>
+                  <h4 class="mb-3 mt-3 text-uppercase bolded">movies</h4>
+                  <p class="text-black-50 lh-lg">
+                    <b>We Have Collections Of Gallaries, Just Choose Your Movie Then Watch, Download And Enjoy</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("series")}} class="text-decoration-none">
+                <div class="feat">
+                  <div class="icon-holder position-relative">
+                    <i class="fa-solid fa-tv fa-4x bottom-0 icon"></i> 
+                  </div>
+                  <h4 class="mb-3 mt-3 text-uppercase bolded">series</h4>
+                  <p class="text-black-50 lh-lg">
+                    <b>We Have Collections Of Gallaries, Just Choose Your Series Then Watch, Download And Enjoy</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("anime")}} class="text-decoration-none">
+                <div class="feat">
+                  <div class="icon-holder position-relative">
+                    <i class="fa-solid fa-dragon fa-4x bottom-0 icon"></i>
+                  </div>
+                  <h4 class="mb-3 mt-3 text-uppercase bolded">anime</h4>
+                  <p class="text-black-50 lh-lg">
+                    <b>We Have Collections Of Gallaries, Just Choose Your Anime Then Watch, Download And Enjoy</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="temp text-center bg-black text-white">
+        <div class="container pb-5 pt-5">
+          <h2 class="green pb-5"> <b>Take a Look</b></h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("jw1")}} class="text-decoration-none" target="_blank">
+                <div class="box" style="background-color: var(--green-color);">
+                  <img class="img-fluid imgSize" src="{{url_for('static',filename="images/movies/john wick 1/john wick chapter 1 poster.jpg")}}" alt="">
+                  <h4 class="p-3 text-light">John Wich : Chapter one</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("hotd")}} class="text-decoration-none" target="_blank">
+                <div class="box" style="background-color: var(--green-color);">
+                  <img class="img-fluid imgSize" src="{{url_for('static',filename="images/series/HOTD/HOTD poster.jpg")}}" alt="">
+                  <h4 class="p-3 text-light">House Of The Dragon</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href={{url_for("aot")}} class="text-decoration-none" target="_blank">
+                <div class="box" style="background-color: var(--green-color);">
+                  <img class="img-fluid imgSize" src="{{url_for('static',filename="images/anime/AOT/AOT poster.jpg")}}" alt="">
+                  <h4 class="p-3 text-light ">Attack On Titan</h4>
+                </div>
+              </a>
+            </div>
+            {% if current_user.email=="mosalah29805012@gmail.com" %}
+            <a href={{url_for("add_film")}} class="text-decoration-none" target="_blank"> <button>Add Film</button></a>
+            {% endif %}
+          </div>
+        </div>
+        
+      </div>
+                
+      <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="info mb-5">
+                <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                  Agallary
+                </a>
+                <p class="mb-5 bolded">
+                  This website is just a template for ITI as a project for IWT course.  
+                </p>
+                <div class="copyright text-dark bolded">
+                  Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                  <div>© 2023 - <span>IWT course</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <div class="links">
+                <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                <ul class="list-unstyled lh-lg bolded">
+                  <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                  {% if current_user.is_authenticated %}
+                  <li><a href="#" class="footlink">Our Services</a></li>
+                  <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                  <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                  <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                  {% if current_user.email=="mosalah29805012@gmail.com" %}
+                  <li><a href={{url_for("add_film")}} class="footlink">Add Film</a></li>
+                  <li><a href={{url_for("edit_film")}} class="footlink">Edit Film</a></li>
+                  <li><a href={{url_for("add_events")}} class="footlink">Add Film Events</a></li>
+                  {% endif %}
+                  <li><a href="#" class="footlink">Terms and Condition</a></li>
+                  {% endif %}
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <div class="links">
+                <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                <ul class="list-unstyled lh-lg bolded">
+                  <li><a href="#" class="footlink">Sign In</a></li>
+                  <li><a href="#" class="footlink">Register</a></li>
+                  <li><a href="#" class="footlink">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="contact">
+                <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>
+                <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                  <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                  <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+</body>
+</html>

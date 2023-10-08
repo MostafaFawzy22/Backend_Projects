@@ -1,0 +1,364 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="all.min.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="allMovies.css")}}">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin="">
+  <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap")}}" rel="stylesheet">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+  <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap")}}" rel="stylesheet">
+  <title>Movie Gallary, avengers:infinity war</title>
+</head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="{{url_for('static',filename="images/movies/john wick 1/john wick chapter 1 poster.jpg")}}""images/movies/avengers infinety war/avengers infinety war poster.jpg" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>Avengers: Infinity War</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2018</b></h5>
+                        <br>
+                        <p class="bolded">
+                          The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+                        </p>
+                        <br>
+                        <div>
+                        <button type="button" class="btn btn-outline-info">Action</button>
+                        <button type="button" class="btn btn-outline-info">Adventure</button>
+                        <button type="button" class="btn btn-outline-info">Sci-Fi</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://youtu.be/6ZfuNTqbHE8" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Movie Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjA0MTg0MjUwMF5BMl5BanBnXkFtZTgwMjc4MjkzNTM@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjA2NTg4ODU2NF5BMl5BanBnXkFtZTgwMTA3Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjA5Njg2NjcyOF5BMl5BanBnXkFtZTgwODY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjA5OTY5NTE3Nl5BMl5BanBnXkFtZTgwOTU4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjAzNjY4NzE4N15BMl5BanBnXkFtZTgwNTY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjcxOTI1NDQ4M15BMl5BanBnXkFtZTgwMDk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjczODgxNTA1M15BMl5BanBnXkFtZTgwOTg2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjE1NzQ2OTEwOV5BMl5BanBnXkFtZTgwNzk2MTUwNTM@._V1_FMjpg_UY2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjE5ODU5MzY5OV5BMl5BanBnXkFtZTgwNjc4MjkzNTM@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjE5ODU5MzY5OV5BMl5BanBnXkFtZTgwNjc4MjkzNTM@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjEzNTQ5MTcwMV5BMl5BanBnXkFtZTgwNDY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjEzOTk0NTI1NV5BMl5BanBnXkFtZTgwODk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjI0NzA1ODE0OV5BMl5BanBnXkFtZTgwMDY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjI1MTg0NjExOV5BMl5BanBnXkFtZTgwNzU4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjI2NzM2MjExNV5BMl5BanBnXkFtZTgwMTY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjI3NDUyMzYwNF5BMl5BanBnXkFtZTgwNjk2MTUwNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjM0OTk4NjEwMV5BMl5BanBnXkFtZTgwNDg4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjM1MzI4NDY4N15BMl5BanBnXkFtZTgwNzk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjM3NzM3OTc2OF5BMl5BanBnXkFtZTgwNjk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjM4NjE0MTYwM15BMl5BanBnXkFtZTgwNzc4MjkzNTM@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjMxNjE4NTQwMV5BMl5BanBnXkFtZTgwMzk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMjQ2NTQ3MDI3Nl5BMl5BanBnXkFtZTgwMzg4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BNDk3MmNmMzItMDY3ZC00ZDNmLWFjYjMtMDc5YjJkMjdmNjBkXkEyXkFqcGdeQXVyNzEyOTQ5MDk@._V1_FMjpg_UX2160_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BNDE0ODg0MDg2OV5BMl5BanBnXkFtZTgwOTY4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMzg0OTQ5NTM4OF5BMl5BanBnXkFtZTgwMTk2MTUwNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTY2MjY0ODU1Nl5BMl5BanBnXkFtZTgwOTk2Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTUyNjY3OTMxN15BMl5BanBnXkFtZTgwMDA3Njk5NDM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTUyMTU2NjUxM15BMl5BanBnXkFtZTgwOTg2MTUwNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTU3NDExMjQyNl5BMl5BanBnXkFtZTgwMjk2MTUwNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTU3MTU5MjMyNV5BMl5BanBnXkFtZTgwNjU4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTU2NTM1MTY0OV5BMl5BanBnXkFtZTgwODc4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTU0NTYyMjQxN15BMl5BanBnXkFtZTgwMDc4MjkzNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/avengers infinety war/MV5BMTkzMTE1Mjk2Nl5BMl5BanBnXkFtZTgwMzk2MTUwNTM@._V1_FMjpg_UX1024_.jpg")}}" alt="">
+                  </div>
+                </div>                
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="info mb-5">
+                    <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                      Agallary
+                    </a>
+                    <p class="mb-5 bolded">
+                      This website is just a template for ITI as a project for IWT course.  
+                    </p>
+                    <div class="copyright text-dark bolded">
+                      Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                      <div>© 2023 - <span>IWT course</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                      <li><a href="#" class="footlink">Our Services</a></li>
+                      <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                      <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                      <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                      <li><a href="#" class="footlink">Terms and Condition</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="#" class="footlink">Sign In</a></li>
+                      <li><a href="#" class="footlink">Register</a></li>
+                      <li><a href="#" class="footlink">About Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="contact">
+                    <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>                    <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                      <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                      <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                      <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+    </body>
+</html>

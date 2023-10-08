@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Fonts Pre Connect -->
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+  <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
+  <link rel="stylesheet" href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap")}}">
+
+  <!-- CSS Files Links -->
+ 
+  <!-- Styles -->
+  <style>
+    *
+    {
+      margin: 0;
+    }
+    body{
+      background-image: url({{ url_for('static', filename='images/background.jfif') }});
+      color:white;
+      padding-top:50px;
+    }
+    form{
+      border: 1px solid rgb(73, 70, 70);
+      width: 19%;
+      padding: 10px;
+      font-size: large;
+      text-align: left;
+      color: white;
+    }
+    label
+    {
+      font-weight: 700;
+    }
+    .input
+    {
+      width: 260px;
+      padding-bottom: 8px;
+    }
+    #Continue
+    {
+      background-color: rgb(236, 184, 87);
+      border: solid 1px orange;
+      width: 270px;
+      padding: 8px;
+    }
+    p{
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    img{
+      width: 150px;
+      border-radius: 50%;
+      padding-bottom:5px;
+    }
+    div
+    {
+      background-color: rgb(243, 241, 241);
+      padding: 5px;
+    }
+    #register
+    {
+        width: 15%;
+        background-color: gainsboro;
+        padding: 7px;
+        border: 1px solid gainsboro;
+    }
+  </style>
+  <!-- Title -->
+  <title>Login Page</title>
+</head>
+
+    <body>
+        <center>
+          <img src="{{url_for('static',filename="images/download.jfif")}}" alt="logo">
+          <form action="" method="POST">
+            {{form.hidden_tag()}}
+            <center>
+              <h2>Log In</h2>
+            </center>
+            <br>
+            <label>Email</label> <br> {{form.email(class="input")}}
+            <br><br>
+            <label>Password</label> <br> {{form.password(class="input")}}
+            <p style="font-size: small;">Passwords must be at least 8 characters.</p>
+            <br>
+            {{form.submit(class="input")}}
+            <br><br>
+            <p style="font-size: small;">Need help?<br>
+                Forgot your password?<br>
+                Other issues with Sign-In</p>
+              <br>
+         </form>
+         <br>
+         <p style="font-size: small;">New to Website?</p>
+         <br>
+         <a href="register"><button id="register">Create Account</button></a>
+        </center>
+        <br><br><br>
+        
+    </body>
+</html>

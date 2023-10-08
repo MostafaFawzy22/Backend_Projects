@@ -1,0 +1,262 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="all.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="allMovies.css")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin="">
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap")}}" rel="stylesheet">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.googleapis.com")}}">
+    <link rel="preconnect" href="{{url_for('static',filename="https://fonts.gstatic.com")}}" crossorigin>
+    <link href="{{url_for('static',filename="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap")}}" rel="stylesheet">
+    <title>Movie Gallary, john wick ch1</title>
+  </head>
+   
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+              <a class="navbar-brand titlefont" href="home.html">
+    Agallary
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('movies')}}>Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('series')}}>Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href={{url_for('anime')}}>Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('logout')}}>Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('profile')}}>Profile</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('register')}}>Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active p-2 p-lg-3" aria-current="page" href={{url_for('login')}}>Log In</a>
+            </li>
+            {% endif %}
+                </ul>
+                <div class="search ps-3 pe-3 d-none d-lg-block whitecolSearch">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <div class="card text-center justify-content-center align-items-center">
+            <div class="container ">
+                <div class="row p-4">
+                    <div class="col-md-6 col-lg-4 text-center justify-content-center align-items-center">
+                        <img class="img-fluid imgSize customImg" src="{{url_for('static',filename="images/movies/john wick 1/john wick chapter 1 poster.jpg")}}" alt="">                  
+                    </div>
+                    <div class="col-md-6 col-lg-8 customCard">
+                        <h2><b>John Wick : Chapter One</b></h2>
+                        <h5 style="color: var(--green-color);"><b>2014</b></h5>
+                        <br>
+                        <p class="bolded">An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.</p>
+                        <br>
+                        <div>
+                        <button type="button" class="btn btn-outline-info">Action</button>
+                        <button type="button" class="btn btn-outline-info">Crime</button>
+                        <button type="button" class="btn btn-outline-info">Thriller</button>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="https://www.youtube.com/watch?v=2AUmvWm5ZDQ" target="_blank" >
+                            <button type="button" class="btn btn-outline-info ">
+                                <i class="fa-brands fa-youtube"></i> Watch trailer
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temp text-center bg-black text-white">
+            <div class="container pb-5 pt-5">
+              <h2 class="green pb-5"> <b>Movie Gallary</b></h2>
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMDk2Zjk2NGYtNjNhOC00MDdjLTg4MjItMGFiMDMxYTk5M2FjXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box" >
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMDkwZDE0NWEtOTA4MC00NTVjLTk4YjgtYTJhZDU1MzY4MGMzXkEyXkFqcGdeQXVyMTI4MTk2NzMz._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMDkxOGE2YzAtZThjOC00ODk4LTlmYWEtYmNiZWI5OGYxZTJjXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_FMjpg_UX656_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMjA1OTUxNjU4M15BMl5BanBnXkFtZTgwNTY3MDk5MjE@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMjE3ODY5NWMtMzUwYy00NDFkLWFjMjQtMWVkODA1YmRjYmRkXkEyXkFqcGdeQXVyMTI4MTk2NzMz._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMTAwMzk3NjA0OTNeQTJeQWpwZ15BbWU4MDM1NzA5OTIx._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMTEyODY0MDI1MDNeQTJeQWpwZ15BbWU4MDQ2NzA5OTIx._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMTk1MDQ0ODUzNF5BMl5BanBnXkFtZTgwMjY3MDk5MjE@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMTM2MzNlZWUtYThmYS00ZTMyLWEwM2MtNDdlM2U2YmJiYzJlXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMTUwMTEyMTAxNl5BMl5BanBnXkFtZTgwODY0NjAwMjI@._V1_FMjpg_UX2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BMzQxMDRmNGMtMjAzNy00ZGFhLTg2NjMtM2I3MzM2ZjEyNTk1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_FMjpg_UX1054_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BNjkxNTcyNTMzNl5BMl5BanBnXkFtZTgwNDU3MDk5MjE@._V1_FMjpg_UY2048_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BNTRiNzBiMTMtYjEzMS00ODY0LTk5YzItY2IzMDViNWEyY2VlXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BNWFkMWY4MmItYTcxMS00MDYzLWJiYjMtMmVhNDUyZjYxNzA5XkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BOWQ2ZjE0NmItMDlmZi00ZjY1LTljODktNWRkMWY1YmY4ZDllXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BYjg2ZGEzMDYtOGI2Yi00ZDczLWEwNTAtMWM0MDIwMDk4NTQ2XkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BYzBhNzgzMTMtNTQwNi00MDg0LWJmNjctYjg0ZGI4ZjMyNzVkXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BZDJjMDQ1NjUtYTFhMC00OWE3LThlMmItNmNhYzQ2ZDMyZTI0XkEyXkFqcGdeQXVyMTI4MjYzOTIy._V1_FMjpg_UX1920_.jpg")}}" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="box">
+                    <img class="img-fluid imgSize2" src="{{url_for('static',filename="images/movies/john wick 1/MV5BZTY5NmI2YTEtYmUxYi00NWQ5LThjMGMtZjEzZDAwMjExN2RkXkEyXkFqcGdeQXVyMTI4MjYzOTIy._V1_FMjpg_UX1280_.jpg")}}" alt="">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="footer pt-5 pb-5 text-black-50 text-center text-md-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-lg-4">
+                  <div class="info mb-5">
+                    <a class="navbar-brand titlefont green" style="font-size: 50px;" href="#">
+                      Agallary
+                    </a>
+                    <p class="mb-5 bolded">
+                      This website is just a template for ITI as a project for IWT course.  
+                    </p>
+                    <div class="copyright text-dark bolded">
+                      Created By <span class="green">Mostafa Fawzy</span><br>
+                    Created By <span class="green">Mohamed Samy</span><br>
+                    Created By <span class="green">Adham Magdy</span>
+                      <div>© 2023 - <span>IWT course</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">Links</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href={{url_for("index")}} class="footlink">Home</a></li>
+                      <li><a href="#" class="footlink">Our Services</a></li>
+                      <li><a href={{url_for("movies")}} class="footlink">Movies</a></li>
+                      <li><a href={{url_for("series")}} class="footlink">Series</a></li>
+                      <li><a href={{url_for("anime")}} class="footlink">Anime</a></li>
+                      <li><a href="#" class="footlink">Terms and Condition</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                  <div class="links">
+                    <h5 class="bolded" style="color: var(--green-color);">About Us</h5>
+                    <ul class="list-unstyled lh-lg bolded">
+                      <li><a href="#" class="footlink">Sign In</a></li>
+                      <li><a href="#" class="footlink">Register</a></li>
+                      <li><a href="#" class="footlink">About Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="contact">
+                    <h5 class="bolded" style="color: var(--green-color);">Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5 bolded">Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mostafaf200380@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">magdyadham70@gmail.com</a>
+                    <a class="btn rounded-pill main-btn w-100 bolded" style="background-color: var(--green-color);" target="_blank" href="https://mail.google.com/">mohameds200@gmail.com</a>                    <ul class="d-flex mt-5 list-unstyled gap-4 green titlefont">
+                      <li><a href="https://www.facebook.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-facebook"></i>                  </a></li>
+                      <li><a href="https://www.twitter.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-twitter"></i>                  </a></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-linkedin"></i>                  </a></li>
+                      <li><a href="https://www.youtube.com/" target="_blank" class="footlink">                    <i class="fa-brands fa-youtube"></i>                  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+    </body>
+</html>

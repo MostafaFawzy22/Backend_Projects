@@ -1,0 +1,158 @@
+:root{
+    --dark-color: black;
+    --green-color: #33d1cc;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+    color: var(--green-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    color: var(--green-color);
+    border-color: var(--green-color);
+}
+.titlefont{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: white;
+}
+.navbar-brand:hover{
+    color: white;
+}
+.mycolor{
+    background-color: black;
+    border: none;
+    color: white;
+}
+.mycolor:hover{
+    background-color: var(--green-color);
+    border: none;
+    color: black;
+}
+.mycolor2{
+    background-color: white;
+    border: none;
+    color: black;
+}
+.mycolor2:hover{
+    background-color: var(--green-color);
+    border: none;
+    color: black;
+}
+.whitecolSearch{
+    color: white;
+}
+.whitecolSearch:hover{
+    color: var(--green-color);
+}
+.landing{
+    background-color: white;
+    min-height: calc(100vh - 72px);
+}
+.main-btn{
+    background-color: black;
+    margin: 4px;
+}
+.green{
+    color: var(--green-color);
+}
+.iconfont{
+    font-size: 5em;
+    color: black;
+}
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gal{
+    min-height: calc(100vh - 58px);
+}
+.bolded{
+    font-weight: bold;
+    color: black;
+}
+.imgSize{
+    height: 600px;
+    width: 100%;
+}
+.logo-black{
+    color: black;
+}
+.green:hover{
+    color: var(--green-color);
+}
+.customCard{
+    padding-left: 150px;
+    justify-content: left;
+    text-align: left;
+    align-items: initial;
+}
+.card{
+    border: none;
+    min-height: calc(100vh - 72px);
+}
+.customImg{
+    border-style: solid;
+    border-color: var(--green-color);
+    border-width: 4px;
+    border-radius: 4px ;
+}
+.btn-outline-info{
+    border-color: var(--green-color);
+    color: var(--green-color);
+}
+.btn-outline-info:hover{
+    border-color: var(--green-color);
+    background-color: var(--green-color);
+    color: white;
+}
+.imgSize2{
+    height: 250px;
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footlink{
+    text-decoration: none;
+    color: black;
+}
+.footlink:hover{
+    text-decoration: none;
+    color: var(--green-color);
+}
+.footlink{
+    text-decoration: none;
+    color: black;
+}
+.footlink:hover{
+    text-decoration: none;
+    color: var(--green-color);
+}
